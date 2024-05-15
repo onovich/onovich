@@ -3,3 +3,5 @@
 \- The way of the blade is the way of the narrow gate.
 
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=onovich&layout=compact)
+
+[![wakatime](https://wakatime.com/badge/user/bc204da5-6353-41ae-a0ad-ae60bc1d630a.svg)](https://wakatime.com/@bc204da5-6353-41ae-a0ad-ae60bc1d630a)
