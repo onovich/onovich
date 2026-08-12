@@ -33,10 +33,10 @@ jobs:
 
       - name: Generate validation outputs
         id: repopalette
-        uses: onovich/RepoPalette@4dfd83c030dfd6dff7bd8af12ad30947c4b63f1f
+        uses: onovich/RepoPalette@6ea7c65fe64653a023e3b5a8458a9c35c471ea50 # v0.2.0
         with:
-          style: bars
-          theme: light
+          style: ribbon
+          theme: paper
           output-directory: .tmp/repopalette
 
       - name: Verify validation outputs
@@ -49,6 +49,8 @@ jobs:
           test -s "$REPOPALETTE_SVG"
           test -s "$REPOPALETTE_DATA"
           grep -q '<svg' "$REPOPALETTE_SVG"
+          grep -q 'data-style="ribbon"' "$REPOPALETTE_SVG"
+          grep -q 'data-theme="paper"' "$REPOPALETTE_SVG"
           jq -e '
             .schemaVersion == 2
             and .username == "onovich"
@@ -74,10 +76,10 @@ jobs:
 
       - name: Generate RepoPalette outputs
         id: repopalette
-        uses: onovich/RepoPalette@4dfd83c030dfd6dff7bd8af12ad30947c4b63f1f
+        uses: onovich/RepoPalette@6ea7c65fe64653a023e3b5a8458a9c35c471ea50 # v0.2.0
         with:
-          style: bars
-          theme: light
+          style: ribbon
+          theme: paper
 
       - name: Verify generated outputs
         shell: bash
@@ -87,6 +89,8 @@ jobs:
         run: |
           test -s "$REPOPALETTE_SVG"
           test -s "$REPOPALETTE_DATA"
+          grep -q 'data-style="ribbon"' "$REPOPALETTE_SVG"
+          grep -q 'data-theme="paper"' "$REPOPALETTE_SVG"
           jq -e '
             .schemaVersion == 2
             and .username == "onovich"
