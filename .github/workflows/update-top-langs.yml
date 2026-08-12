@@ -1,0 +1,76 @@
+name: Update top languages card
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/update-top-langs.yml"
+      - "package.json"
+      - "scripts/toplang/**"
+      - "toplang.config.json"
+  pull_request:
+    paths:
+      - ".github/workflows/update-top-langs.yml"
+      - "package.json"
+      - "scripts/toplang/**"
+      - "toplang.config.json"
+
+permissions: {}
+
+concurrency:
+  group: "top-languages-${{ github.workflow }}-${{ github.ref }}"
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: Test generator
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Set up Node.js
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: 24
+      - name: Run tests
+        run: npm test
+
+  update:
+    name: Generate and commit card
+    if: github.event_name == 'workflow_dispatch'
+    needs: test
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - name: Check out triggering branch
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.ref_name }}
+      - name: Set up Node.js
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: 24
+      - name: Generate card
+        run: npm run generate:toplangs
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+      - name: Commit changed outputs
+        shell: bash
+        run: |
+          git add -- assets/top-langs.svg assets/top-langs-data.json
+          if git diff --cached --quiet -- assets/top-langs.svg assets/top-langs-data.json; then
+            echo "Top languages outputs are already current."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore(profile): update top languages card"
+          git push
