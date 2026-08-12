@@ -1,4 +1,4 @@
-name: Update top languages card
+name: Update RepoPalette languages
 
 on:
   workflow_dispatch:
@@ -9,43 +9,59 @@ on:
       - main
     paths:
       - ".github/workflows/update-top-langs.yml"
-      - "package.json"
-      - "scripts/toplang/**"
-      - "toplang.config.json"
   pull_request:
     paths:
       - ".github/workflows/update-top-langs.yml"
-      - "package.json"
-      - "scripts/toplang/**"
-      - "toplang.config.json"
 
 permissions: {}
 
 concurrency:
-  group: "top-languages-${{ github.workflow }}-${{ github.ref }}"
+  group: "repopalette-${{ github.workflow }}-${{ github.ref }}"
   cancel-in-progress: true
 
 jobs:
-  test:
-    name: Test generator
+  validate:
+    name: Validate RepoPalette integration
+    if: github.event_name == 'pull_request' || github.event_name == 'push'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     permissions:
       contents: read
     steps:
-      - name: Check out repository
+      - name: Check out profile repository
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-      - name: Set up Node.js
-        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+
+      - name: Generate validation outputs
+        id: repopalette
+        uses: onovich/RepoPalette@4dfd83c030dfd6dff7bd8af12ad30947c4b63f1f
         with:
-          node-version: 24
-      - name: Run tests
-        run: npm test
+          style: bars
+          theme: light
+          output-directory: .tmp/repopalette
+
+      - name: Verify validation outputs
+        shell: bash
+        env:
+          REPOPALETTE_SVG: ${{ steps.repopalette.outputs.svg-path }}
+          REPOPALETTE_DATA: ${{ steps.repopalette.outputs.data-path }}
+          REPOPALETTE_REPOSITORY_COUNT: ${{ steps.repopalette.outputs.repository-count }}
+        run: |
+          test -s "$REPOPALETTE_SVG"
+          test -s "$REPOPALETTE_DATA"
+          grep -q '<svg' "$REPOPALETTE_SVG"
+          jq -e '
+            .schemaVersion == 2
+            and .username == "onovich"
+            and .repositoryCount >= 1
+            and .includedRepositoryCount >= 1
+            and ((.repositoryScope.included | type) == "array")
+            and ((.repositoryScope.excluded | type) == "array")
+          ' "$REPOPALETTE_DATA" > /dev/null
+          test "$(jq -r '.repositoryCount' "$REPOPALETTE_DATA")" = "$REPOPALETTE_REPOSITORY_COUNT"
 
   update:
-    name: Generate and commit card
+    name: Generate and commit RepoPalette outputs
     if: github.event_name == 'workflow_dispatch' || github.event_name == 'schedule'
-    needs: test
     runs-on: ubuntu-latest
     timeout-minutes: 10
     permissions:
@@ -55,24 +71,42 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           ref: ${{ github.ref_name }}
-      - name: Set up Node.js
-        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+
+      - name: Generate RepoPalette outputs
+        id: repopalette
+        uses: onovich/RepoPalette@4dfd83c030dfd6dff7bd8af12ad30947c4b63f1f
         with:
-          node-version: 24
-      - name: Generate card
-        run: npm run generate:toplangs
+          style: bars
+          theme: light
+
+      - name: Verify generated outputs
+        shell: bash
         env:
-          GITHUB_TOKEN: ${{ github.token }}
+          REPOPALETTE_SVG: ${{ steps.repopalette.outputs.svg-path }}
+          REPOPALETTE_DATA: ${{ steps.repopalette.outputs.data-path }}
+        run: |
+          test -s "$REPOPALETTE_SVG"
+          test -s "$REPOPALETTE_DATA"
+          jq -e '
+            .schemaVersion == 2
+            and .username == "onovich"
+            and .repositoryCount >= 1
+            and .includedRepositoryCount >= 1
+          ' "$REPOPALETTE_DATA" > /dev/null
+
       - name: Commit changed outputs
         shell: bash
+        env:
+          REPOPALETTE_SVG: ${{ steps.repopalette.outputs.svg-path }}
+          REPOPALETTE_DATA: ${{ steps.repopalette.outputs.data-path }}
         run: |
-          git add -- assets/top-langs.svg assets/top-langs-data.json
-          if git diff --cached --quiet -- assets/top-langs.svg assets/top-langs-data.json; then
-            echo "Top languages outputs are already current."
+          git add -- "$REPOPALETTE_SVG" "$REPOPALETTE_DATA"
+          if git diff --cached --quiet; then
+            echo "RepoPalette outputs are already current."
             exit 0
           fi
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "chore(profile): update top languages card"
+          git commit -m "chore(profile): update RepoPalette outputs"
           git push
