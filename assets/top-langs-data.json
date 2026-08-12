@@ -3,7 +3,7 @@
   "username": "onovich",
   "repositoryCount": 168,
   "includedRepositoryCount": 167,
-  "totalBytes": 55170455,
+  "totalBytes": 55176649,
   "repositoryScope": {
     "included": [
       "2048",
@@ -188,49 +188,49 @@
       "name": "TypeScript",
       "bytes": 18035190,
       "color": "#3178c6",
-      "percentage": 32.6899
+      "percentage": 32.6863
     },
     {
       "name": "C#",
       "bytes": 17683906,
       "color": "#178600",
-      "percentage": 32.0532
+      "percentage": 32.0496
     },
     {
       "name": "JavaScript",
-      "bytes": 10201166,
+      "bytes": 10205462,
       "color": "#f1e05a",
-      "percentage": 18.4903
+      "percentage": 18.496
     },
     {
       "name": "HTML",
-      "bytes": 3812319,
+      "bytes": 3814217,
       "color": "#e34c26",
-      "percentage": 6.9101
+      "percentage": 6.9127
     },
     {
       "name": "Python",
       "bytes": 2569208,
       "color": "#3572A5",
-      "percentage": 4.6569
+      "percentage": 4.6563
     },
     {
       "name": "CSS",
       "bytes": 849934,
       "color": "#663399",
-      "percentage": 1.5406
+      "percentage": 1.5404
     },
     {
       "name": "PowerShell",
       "bytes": 805047,
       "color": "#012456",
-      "percentage": 1.4592
+      "percentage": 1.459
     },
     {
       "name": "ShaderLab",
       "bytes": 426424,
       "color": "#222c37",
-      "percentage": 0.7729
+      "percentage": 0.7728
     },
     {
       "name": "C",
@@ -248,7 +248,7 @@
       "name": "HLSL",
       "bytes": 59943,
       "color": "#aace60",
-      "percentage": 0.1087
+      "percentage": 0.1086
     },
     {
       "name": "GDScript",
@@ -317,7 +317,7 @@
     "groups": {
       "manual": {
         "totalBytes": 18178863,
-        "percentage": 32.9504,
+        "percentage": 32.9467,
         "languages": [
           "C#",
           "ShaderLab",
@@ -326,8 +326,8 @@
         ]
       },
       "vibe": {
-        "totalBytes": 36991592,
-        "percentage": 67.0496,
+        "totalBytes": 36997786,
+        "percentage": 67.0533,
         "languages": [
           "TypeScript",
           "JavaScript",
