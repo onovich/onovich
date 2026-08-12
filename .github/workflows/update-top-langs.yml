@@ -33,7 +33,7 @@ jobs:
 
       - name: Generate validation outputs
         id: repopalette
-        uses: onovich/RepoPalette@6f8085196d98ec020aafb6643c90874d088cddd3 # v0.5.0 implementation
+        uses: onovich/RepoPalette@3f28918f26dc3097482d349d17cd0503e8ce263f # v0.6.0 implementation
         with:
           style: ribbon
           theme: paper
@@ -56,6 +56,10 @@ jobs:
           grep -q 'data-coding-mode="split"' "$REPOPALETTE_SVG"
           grep -q 'data-role="coding-group" data-group="manual"' "$REPOPALETTE_SVG"
           grep -q 'data-role="coding-group" data-group="vibe"' "$REPOPALETTE_SVG"
+          grep -A1 'data-role="coding-overview-part" data-group="manual"' "$REPOPALETTE_SVG" | grep -q 'fill="#fd7136"'
+          grep -A1 'data-role="coding-overview-part" data-group="vibe"' "$REPOPALETTE_SVG" | grep -q 'fill="#024b81"'
+          grep -Eq 'data-language="C#"[^>]*fill="#fd7136"' "$REPOPALETTE_SVG"
+          grep -Eq 'data-language="TypeScript"[^>]*fill="#024b81"' "$REPOPALETTE_SVG"
           test "$(grep -c '>RepoPalette</text>' "$REPOPALETTE_SVG")" = "1"
           ! grep -q '>RIBBON</text>' "$REPOPALETTE_SVG"
           jq -e '
@@ -89,7 +93,7 @@ jobs:
 
       - name: Generate RepoPalette outputs
         id: repopalette
-        uses: onovich/RepoPalette@6f8085196d98ec020aafb6643c90874d088cddd3 # v0.5.0 implementation
+        uses: onovich/RepoPalette@3f28918f26dc3097482d349d17cd0503e8ce263f # v0.6.0 implementation
         with:
           style: ribbon
           theme: paper
@@ -110,6 +114,10 @@ jobs:
           grep -q 'data-coding-mode="split"' "$REPOPALETTE_SVG"
           grep -q 'data-role="coding-group" data-group="manual"' "$REPOPALETTE_SVG"
           grep -q 'data-role="coding-group" data-group="vibe"' "$REPOPALETTE_SVG"
+          grep -A1 'data-role="coding-overview-part" data-group="manual"' "$REPOPALETTE_SVG" | grep -q 'fill="#fd7136"'
+          grep -A1 'data-role="coding-overview-part" data-group="vibe"' "$REPOPALETTE_SVG" | grep -q 'fill="#024b81"'
+          grep -Eq 'data-language="C#"[^>]*fill="#fd7136"' "$REPOPALETTE_SVG"
+          grep -Eq 'data-language="TypeScript"[^>]*fill="#024b81"' "$REPOPALETTE_SVG"
           test "$(grep -c '>RepoPalette</text>' "$REPOPALETTE_SVG")" = "1"
           ! grep -q '>RIBBON</text>' "$REPOPALETTE_SVG"
           jq -e '
