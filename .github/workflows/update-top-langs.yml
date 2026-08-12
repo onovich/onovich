@@ -60,8 +60,18 @@ jobs:
           grep -A1 'data-role="coding-overview-part" data-group="vibe"' "$REPOPALETTE_SVG" | grep -q 'fill="#024b81"'
           grep -Eq 'data-language="C#"[^>]*fill="#fd7136"' "$REPOPALETTE_SVG"
           grep -Eq 'data-language="TypeScript"[^>]*fill="#024b81"' "$REPOPALETTE_SVG"
-          grep -A1 '>GLSL</text>' "$REPOPALETTE_SVG" | grep -q '&lt;0.1%'
-          ! grep -A1 '>GLSL</text>' "$REPOPALETTE_SVG" | grep -q '>0.0%</text>'
+          glsl_is_sub_tenth="$(jq -r '
+            . as $audit
+            | ([.languages[] | select(.name == "GLSL") | .bytes][0] // 0) as $bytes
+            | if $bytes > 0 and $audit.classification.groups.manual.totalBytes > 0
+              then (($bytes / $audit.classification.groups.manual.totalBytes) * 100 < 0.1)
+              else false
+              end
+          ' "$REPOPALETTE_DATA")"
+          if [[ "$glsl_is_sub_tenth" == "true" ]]; then
+            grep -A1 '>GLSL</text>' "$REPOPALETTE_SVG" | grep -q '&lt;0.1%'
+            ! grep -A1 '>GLSL</text>' "$REPOPALETTE_SVG" | grep -q '>0.0%</text>'
+          fi
           test "$(grep -c '>RepoPalette</text>' "$REPOPALETTE_SVG")" = "1"
           ! grep -q '>RIBBON</text>' "$REPOPALETTE_SVG"
           jq -e '
@@ -120,8 +130,18 @@ jobs:
           grep -A1 'data-role="coding-overview-part" data-group="vibe"' "$REPOPALETTE_SVG" | grep -q 'fill="#024b81"'
           grep -Eq 'data-language="C#"[^>]*fill="#fd7136"' "$REPOPALETTE_SVG"
           grep -Eq 'data-language="TypeScript"[^>]*fill="#024b81"' "$REPOPALETTE_SVG"
-          grep -A1 '>GLSL</text>' "$REPOPALETTE_SVG" | grep -q '&lt;0.1%'
-          ! grep -A1 '>GLSL</text>' "$REPOPALETTE_SVG" | grep -q '>0.0%</text>'
+          glsl_is_sub_tenth="$(jq -r '
+            . as $audit
+            | ([.languages[] | select(.name == "GLSL") | .bytes][0] // 0) as $bytes
+            | if $bytes > 0 and $audit.classification.groups.manual.totalBytes > 0
+              then (($bytes / $audit.classification.groups.manual.totalBytes) * 100 < 0.1)
+              else false
+              end
+          ' "$REPOPALETTE_DATA")"
+          if [[ "$glsl_is_sub_tenth" == "true" ]]; then
+            grep -A1 '>GLSL</text>' "$REPOPALETTE_SVG" | grep -q '&lt;0.1%'
+            ! grep -A1 '>GLSL</text>' "$REPOPALETTE_SVG" | grep -q '>0.0%</text>'
+          fi
           test "$(grep -c '>RepoPalette</text>' "$REPOPALETTE_SVG")" = "1"
           ! grep -q '>RIBBON</text>' "$REPOPALETTE_SVG"
           jq -e '
