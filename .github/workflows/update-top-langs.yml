@@ -33,31 +33,51 @@ jobs:
 
       - name: Generate validation outputs
         id: repopalette
-        uses: onovich/RepoPalette@6ea7c65fe64653a023e3b5a8458a9c35c471ea50 # v0.2.0
+        uses: onovich/RepoPalette@33d2164aab51e3a6bb1ba6129d506a70d9973ded # v0.3.0
         with:
           style: ribbon
           theme: paper
+          show-branding: "true"
+          coding-mode: split
+          manual-languages: "C#,ShaderLab,HLSL,GLSL"
           output-directory: .tmp/repopalette
 
       - name: Verify validation outputs
         shell: bash
         env:
-          REPOPALETTE_SVG: ${{ steps.repopalette.outputs.svg-path }}
+          REPOPALETTE_SINGLE_SVG: ${{ steps.repopalette.outputs.svg-path }}
+          REPOPALETTE_MANUAL_SVG: ${{ steps.repopalette.outputs.manual-svg-path }}
+          REPOPALETTE_VIBE_SVG: ${{ steps.repopalette.outputs.vibe-svg-path }}
           REPOPALETTE_DATA: ${{ steps.repopalette.outputs.data-path }}
           REPOPALETTE_REPOSITORY_COUNT: ${{ steps.repopalette.outputs.repository-count }}
         run: |
-          test -s "$REPOPALETTE_SVG"
+          test -z "$REPOPALETTE_SINGLE_SVG"
+          test -s "$REPOPALETTE_MANUAL_SVG"
+          test -s "$REPOPALETTE_VIBE_SVG"
           test -s "$REPOPALETTE_DATA"
-          grep -q '<svg' "$REPOPALETTE_SVG"
-          grep -q 'data-style="ribbon"' "$REPOPALETTE_SVG"
-          grep -q 'data-theme="paper"' "$REPOPALETTE_SVG"
+          grep -q 'data-style="ribbon"' "$REPOPALETTE_MANUAL_SVG"
+          grep -q 'data-theme="paper"' "$REPOPALETTE_MANUAL_SVG"
+          grep -q 'data-coding-group="manual"' "$REPOPALETTE_MANUAL_SVG"
+          grep -q 'data-role="brand-watermark"' "$REPOPALETTE_MANUAL_SVG"
+          ! grep -q '>RIBBON</text>' "$REPOPALETTE_MANUAL_SVG"
+          grep -q 'data-style="ribbon"' "$REPOPALETTE_VIBE_SVG"
+          grep -q 'data-theme="paper"' "$REPOPALETTE_VIBE_SVG"
+          grep -q 'data-coding-group="vibe"' "$REPOPALETTE_VIBE_SVG"
+          grep -q 'data-role="brand-watermark"' "$REPOPALETTE_VIBE_SVG"
+          ! grep -q '>RIBBON</text>' "$REPOPALETTE_VIBE_SVG"
           jq -e '
-            .schemaVersion == 2
+            .schemaVersion == 3
             and .username == "onovich"
             and .repositoryCount >= 1
             and .includedRepositoryCount >= 1
             and ((.repositoryScope.included | type) == "array")
             and ((.repositoryScope.excluded | type) == "array")
+            and .classification.mode == "split"
+            and .classification.source == "user-declared"
+            and .classification.manualLanguages == ["C#", "ShaderLab", "HLSL", "GLSL"]
+            and (.classification.groups.manual.totalBytes + .classification.groups.vibe.totalBytes == .totalBytes)
+            and ((.classification.groups.manual.languages - ["C#", "ShaderLab", "HLSL", "GLSL"] | length) == 0)
+            and ((.classification.groups.vibe.languages | map(select(. == "C#" or . == "ShaderLab" or . == "HLSL" or . == "GLSL")) | length) == 0)
           ' "$REPOPALETTE_DATA" > /dev/null
           test "$(jq -r '.repositoryCount' "$REPOPALETTE_DATA")" = "$REPOPALETTE_REPOSITORY_COUNT"
 
@@ -76,35 +96,55 @@ jobs:
 
       - name: Generate RepoPalette outputs
         id: repopalette
-        uses: onovich/RepoPalette@6ea7c65fe64653a023e3b5a8458a9c35c471ea50 # v0.2.0
+        uses: onovich/RepoPalette@33d2164aab51e3a6bb1ba6129d506a70d9973ded # v0.3.0
         with:
           style: ribbon
           theme: paper
+          show-branding: "true"
+          coding-mode: split
+          manual-languages: "C#,ShaderLab,HLSL,GLSL"
 
       - name: Verify generated outputs
         shell: bash
         env:
-          REPOPALETTE_SVG: ${{ steps.repopalette.outputs.svg-path }}
+          REPOPALETTE_SINGLE_SVG: ${{ steps.repopalette.outputs.svg-path }}
+          REPOPALETTE_MANUAL_SVG: ${{ steps.repopalette.outputs.manual-svg-path }}
+          REPOPALETTE_VIBE_SVG: ${{ steps.repopalette.outputs.vibe-svg-path }}
           REPOPALETTE_DATA: ${{ steps.repopalette.outputs.data-path }}
         run: |
-          test -s "$REPOPALETTE_SVG"
+          test -z "$REPOPALETTE_SINGLE_SVG"
+          test -s "$REPOPALETTE_MANUAL_SVG"
+          test -s "$REPOPALETTE_VIBE_SVG"
           test -s "$REPOPALETTE_DATA"
-          grep -q 'data-style="ribbon"' "$REPOPALETTE_SVG"
-          grep -q 'data-theme="paper"' "$REPOPALETTE_SVG"
+          grep -q 'data-style="ribbon"' "$REPOPALETTE_MANUAL_SVG"
+          grep -q 'data-theme="paper"' "$REPOPALETTE_MANUAL_SVG"
+          grep -q 'data-coding-group="manual"' "$REPOPALETTE_MANUAL_SVG"
+          grep -q 'data-role="brand-watermark"' "$REPOPALETTE_MANUAL_SVG"
+          ! grep -q '>RIBBON</text>' "$REPOPALETTE_MANUAL_SVG"
+          grep -q 'data-style="ribbon"' "$REPOPALETTE_VIBE_SVG"
+          grep -q 'data-theme="paper"' "$REPOPALETTE_VIBE_SVG"
+          grep -q 'data-coding-group="vibe"' "$REPOPALETTE_VIBE_SVG"
+          grep -q 'data-role="brand-watermark"' "$REPOPALETTE_VIBE_SVG"
+          ! grep -q '>RIBBON</text>' "$REPOPALETTE_VIBE_SVG"
           jq -e '
-            .schemaVersion == 2
+            .schemaVersion == 3
             and .username == "onovich"
             and .repositoryCount >= 1
             and .includedRepositoryCount >= 1
+            and .classification.mode == "split"
+            and .classification.source == "user-declared"
+            and .classification.manualLanguages == ["C#", "ShaderLab", "HLSL", "GLSL"]
+            and (.classification.groups.manual.totalBytes + .classification.groups.vibe.totalBytes == .totalBytes)
           ' "$REPOPALETTE_DATA" > /dev/null
 
       - name: Commit changed outputs
         shell: bash
         env:
-          REPOPALETTE_SVG: ${{ steps.repopalette.outputs.svg-path }}
+          REPOPALETTE_MANUAL_SVG: ${{ steps.repopalette.outputs.manual-svg-path }}
+          REPOPALETTE_VIBE_SVG: ${{ steps.repopalette.outputs.vibe-svg-path }}
           REPOPALETTE_DATA: ${{ steps.repopalette.outputs.data-path }}
         run: |
-          git add -- "$REPOPALETTE_SVG" "$REPOPALETTE_DATA"
+          git add -- "$REPOPALETTE_MANUAL_SVG" "$REPOPALETTE_VIBE_SVG" "$REPOPALETTE_DATA"
           if git diff --cached --quiet; then
             echo "RepoPalette outputs are already current."
             exit 0
