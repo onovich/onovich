@@ -33,7 +33,7 @@ jobs:
 
       - name: Generate validation outputs
         id: repopalette
-        uses: onovich/RepoPalette@33d2164aab51e3a6bb1ba6129d506a70d9973ded # v0.3.0
+        uses: onovich/RepoPalette@6f8085196d98ec020aafb6643c90874d088cddd3 # v0.5.0 implementation
         with:
           style: ribbon
           theme: paper
@@ -45,26 +45,19 @@ jobs:
       - name: Verify validation outputs
         shell: bash
         env:
-          REPOPALETTE_SINGLE_SVG: ${{ steps.repopalette.outputs.svg-path }}
-          REPOPALETTE_MANUAL_SVG: ${{ steps.repopalette.outputs.manual-svg-path }}
-          REPOPALETTE_VIBE_SVG: ${{ steps.repopalette.outputs.vibe-svg-path }}
+          REPOPALETTE_SVG: ${{ steps.repopalette.outputs.svg-path }}
           REPOPALETTE_DATA: ${{ steps.repopalette.outputs.data-path }}
           REPOPALETTE_REPOSITORY_COUNT: ${{ steps.repopalette.outputs.repository-count }}
         run: |
-          test -z "$REPOPALETTE_SINGLE_SVG"
-          test -s "$REPOPALETTE_MANUAL_SVG"
-          test -s "$REPOPALETTE_VIBE_SVG"
+          test -s "$REPOPALETTE_SVG"
           test -s "$REPOPALETTE_DATA"
-          grep -q 'data-style="ribbon"' "$REPOPALETTE_MANUAL_SVG"
-          grep -q 'data-theme="paper"' "$REPOPALETTE_MANUAL_SVG"
-          grep -q 'data-coding-group="manual"' "$REPOPALETTE_MANUAL_SVG"
-          grep -q 'data-role="brand-watermark"' "$REPOPALETTE_MANUAL_SVG"
-          ! grep -q '>RIBBON</text>' "$REPOPALETTE_MANUAL_SVG"
-          grep -q 'data-style="ribbon"' "$REPOPALETTE_VIBE_SVG"
-          grep -q 'data-theme="paper"' "$REPOPALETTE_VIBE_SVG"
-          grep -q 'data-coding-group="vibe"' "$REPOPALETTE_VIBE_SVG"
-          grep -q 'data-role="brand-watermark"' "$REPOPALETTE_VIBE_SVG"
-          ! grep -q '>RIBBON</text>' "$REPOPALETTE_VIBE_SVG"
+          grep -q 'data-style="ribbon"' "$REPOPALETTE_SVG"
+          grep -q 'data-theme="paper"' "$REPOPALETTE_SVG"
+          grep -q 'data-coding-mode="split"' "$REPOPALETTE_SVG"
+          grep -q 'data-role="coding-group" data-group="manual"' "$REPOPALETTE_SVG"
+          grep -q 'data-role="coding-group" data-group="vibe"' "$REPOPALETTE_SVG"
+          test "$(grep -c '>RepoPalette</text>' "$REPOPALETTE_SVG")" = "1"
+          ! grep -q '>RIBBON</text>' "$REPOPALETTE_SVG"
           jq -e '
             .schemaVersion == 3
             and .username == "onovich"
@@ -96,7 +89,7 @@ jobs:
 
       - name: Generate RepoPalette outputs
         id: repopalette
-        uses: onovich/RepoPalette@33d2164aab51e3a6bb1ba6129d506a70d9973ded # v0.3.0
+        uses: onovich/RepoPalette@6f8085196d98ec020aafb6643c90874d088cddd3 # v0.5.0 implementation
         with:
           style: ribbon
           theme: paper
@@ -107,25 +100,18 @@ jobs:
       - name: Verify generated outputs
         shell: bash
         env:
-          REPOPALETTE_SINGLE_SVG: ${{ steps.repopalette.outputs.svg-path }}
-          REPOPALETTE_MANUAL_SVG: ${{ steps.repopalette.outputs.manual-svg-path }}
-          REPOPALETTE_VIBE_SVG: ${{ steps.repopalette.outputs.vibe-svg-path }}
+          REPOPALETTE_SVG: ${{ steps.repopalette.outputs.svg-path }}
           REPOPALETTE_DATA: ${{ steps.repopalette.outputs.data-path }}
         run: |
-          test -z "$REPOPALETTE_SINGLE_SVG"
-          test -s "$REPOPALETTE_MANUAL_SVG"
-          test -s "$REPOPALETTE_VIBE_SVG"
+          test -s "$REPOPALETTE_SVG"
           test -s "$REPOPALETTE_DATA"
-          grep -q 'data-style="ribbon"' "$REPOPALETTE_MANUAL_SVG"
-          grep -q 'data-theme="paper"' "$REPOPALETTE_MANUAL_SVG"
-          grep -q 'data-coding-group="manual"' "$REPOPALETTE_MANUAL_SVG"
-          grep -q 'data-role="brand-watermark"' "$REPOPALETTE_MANUAL_SVG"
-          ! grep -q '>RIBBON</text>' "$REPOPALETTE_MANUAL_SVG"
-          grep -q 'data-style="ribbon"' "$REPOPALETTE_VIBE_SVG"
-          grep -q 'data-theme="paper"' "$REPOPALETTE_VIBE_SVG"
-          grep -q 'data-coding-group="vibe"' "$REPOPALETTE_VIBE_SVG"
-          grep -q 'data-role="brand-watermark"' "$REPOPALETTE_VIBE_SVG"
-          ! grep -q '>RIBBON</text>' "$REPOPALETTE_VIBE_SVG"
+          grep -q 'data-style="ribbon"' "$REPOPALETTE_SVG"
+          grep -q 'data-theme="paper"' "$REPOPALETTE_SVG"
+          grep -q 'data-coding-mode="split"' "$REPOPALETTE_SVG"
+          grep -q 'data-role="coding-group" data-group="manual"' "$REPOPALETTE_SVG"
+          grep -q 'data-role="coding-group" data-group="vibe"' "$REPOPALETTE_SVG"
+          test "$(grep -c '>RepoPalette</text>' "$REPOPALETTE_SVG")" = "1"
+          ! grep -q '>RIBBON</text>' "$REPOPALETTE_SVG"
           jq -e '
             .schemaVersion == 3
             and .username == "onovich"
@@ -140,11 +126,16 @@ jobs:
       - name: Commit changed outputs
         shell: bash
         env:
-          REPOPALETTE_MANUAL_SVG: ${{ steps.repopalette.outputs.manual-svg-path }}
-          REPOPALETTE_VIBE_SVG: ${{ steps.repopalette.outputs.vibe-svg-path }}
+          REPOPALETTE_SVG: ${{ steps.repopalette.outputs.svg-path }}
           REPOPALETTE_DATA: ${{ steps.repopalette.outputs.data-path }}
         run: |
-          git add -- "$REPOPALETTE_MANUAL_SVG" "$REPOPALETTE_VIBE_SVG" "$REPOPALETTE_DATA"
+          files=("$REPOPALETTE_SVG" "$REPOPALETTE_DATA")
+          for legacy in assets/top-langs-manual.svg assets/top-langs-vibe.svg; do
+            if [[ -e "$legacy" ]] || git ls-files --error-unmatch -- "$legacy" >/dev/null 2>&1; then
+              files+=("$legacy")
+            fi
+          done
+          git add -A -- "${files[@]}"
           if git diff --cached --quiet; then
             echo "RepoPalette outputs are already current."
             exit 0
