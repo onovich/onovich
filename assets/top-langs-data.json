@@ -1,9 +1,9 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 3,
   "username": "onovich",
   "repositoryCount": 168,
   "includedRepositoryCount": 167,
-  "totalBytes": 55120636,
+  "totalBytes": 55140707,
   "repositoryScope": {
     "included": [
       "2048",
@@ -188,55 +188,55 @@
       "name": "TypeScript",
       "bytes": 18035190,
       "color": "#3178c6",
-      "percentage": 32.7195
+      "percentage": 32.7076
     },
     {
       "name": "C#",
       "bytes": 17683906,
       "color": "#178600",
-      "percentage": 32.0822
+      "percentage": 32.0705
     },
     {
       "name": "JavaScript",
-      "bytes": 10142116,
+      "bytes": 10161395,
       "color": "#f1e05a",
-      "percentage": 18.3999
+      "percentage": 18.4281
     },
     {
       "name": "HTML",
-      "bytes": 3821625,
+      "bytes": 3822342,
       "color": "#e34c26",
-      "percentage": 6.9332
+      "percentage": 6.932
     },
     {
       "name": "Python",
       "bytes": 2569208,
       "color": "#3572A5",
-      "percentage": 4.6611
+      "percentage": 4.6594
     },
     {
       "name": "CSS",
       "bytes": 849934,
       "color": "#663399",
-      "percentage": 1.542
+      "percentage": 1.5414
     },
     {
       "name": "PowerShell",
-      "bytes": 804972,
+      "bytes": 805047,
       "color": "#012456",
-      "percentage": 1.4604
+      "percentage": 1.46
     },
     {
       "name": "ShaderLab",
       "bytes": 426424,
       "color": "#222c37",
-      "percentage": 0.7736
+      "percentage": 0.7733
     },
     {
       "name": "C",
       "bytes": 398903,
       "color": "#555555",
-      "percentage": 0.7237
+      "percentage": 0.7234
     },
     {
       "name": "Shell",
@@ -254,7 +254,7 @@
       "name": "GDScript",
       "bytes": 54219,
       "color": "#355570",
-      "percentage": 0.0984
+      "percentage": 0.0983
     },
     {
       "name": "Astro",
@@ -272,7 +272,7 @@
       "name": "Rust",
       "bytes": 26437,
       "color": "#dea584",
-      "percentage": 0.048
+      "percentage": 0.0479
     },
     {
       "name": "CMake",
@@ -290,7 +290,7 @@
       "name": "Batchfile",
       "bytes": 17062,
       "color": "#C1F12E",
-      "percentage": 0.031
+      "percentage": 0.0309
     },
     {
       "name": "Mathematica",
@@ -305,6 +305,50 @@
       "percentage": 0.0156
     }
   ],
+  "classification": {
+    "mode": "split",
+    "source": "user-declared",
+    "manualLanguages": [
+      "C#",
+      "ShaderLab",
+      "HLSL",
+      "GLSL"
+    ],
+    "groups": {
+      "manual": {
+        "totalBytes": 18178863,
+        "percentage": 32.9681,
+        "languages": [
+          "C#",
+          "ShaderLab",
+          "HLSL",
+          "GLSL"
+        ]
+      },
+      "vibe": {
+        "totalBytes": 36961844,
+        "percentage": 67.0319,
+        "languages": [
+          "TypeScript",
+          "JavaScript",
+          "HTML",
+          "Python",
+          "CSS",
+          "PowerShell",
+          "C",
+          "Shell",
+          "GDScript",
+          "Astro",
+          "Swift",
+          "Rust",
+          "CMake",
+          "MiniZinc",
+          "Batchfile",
+          "Mathematica"
+        ]
+      }
+    }
+  },
   "filters": {
     "includeForks": false,
     "includeArchived": false,
