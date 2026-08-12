@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "username": "onovich",
+  "repositoryCount": 166,
+  "includedRepositoryCount": 166,
+  "totalBytes": 54803564,
+  "languages": [
+    {
+      "name": "TypeScript",
+      "bytes": 18035190,
+      "color": "#3178c6",
+      "percentage": 32.9088
+    },
+    {
+      "name": "C#",
+      "bytes": 17683906,
+      "color": "#178600",
+      "percentage": 32.2678
+    },
+    {
+      "name": "JavaScript",
+      "bytes": 9995100,
+      "color": "#f1e05a",
+      "percentage": 18.238
+    },
+    {
+      "name": "HTML",
+      "bytes": 3686969,
+      "color": "#e34c26",
+      "percentage": 6.7276
+    },
+    {
+      "name": "Python",
+      "bytes": 2569208,
+      "color": "#3572A5",
+      "percentage": 4.688
+    },
+    {
+      "name": "CSS",
+      "bytes": 848508,
+      "color": "#663399",
+      "percentage": 1.5483
+    },
+    {
+      "name": "PowerShell",
+      "bytes": 770998,
+      "color": "#012456",
+      "percentage": 1.4068
+    },
+    {
+      "name": "ShaderLab",
+      "bytes": 426424,
+      "color": "#222c37",
+      "percentage": 0.7781
+    },
+    {
+      "name": "C",
+      "bytes": 398903,
+      "color": "#555555",
+      "percentage": 0.7279
+    },
+    {
+      "name": "Shell",
+      "bytes": 85443,
+      "color": "#89e051",
+      "percentage": 0.1559
+    },
+    {
+      "name": "HLSL",
+      "bytes": 59943,
+      "color": "#aace60",
+      "percentage": 0.1094
+    },
+    {
+      "name": "GDScript",
+      "bytes": 54219,
+      "color": "#355570",
+      "percentage": 0.0989
+    },
+    {
+      "name": "Astro",
+      "bytes": 42338,
+      "color": "#ff5a03",
+      "percentage": 0.0773
+    },
+    {
+      "name": "Swift",
+      "bytes": 33316,
+      "color": "#F05138",
+      "percentage": 0.0608
+    },
+    {
+      "name": "Rust",
+      "bytes": 26437,
+      "color": "#dea584",
+      "percentage": 0.0482
+    },
+    {
+      "name": "CMake",
+      "bytes": 24155,
+      "color": "#DA3434",
+      "percentage": 0.0441
+    },
+    {
+      "name": "MiniZinc",
+      "bytes": 21376,
+      "color": "#06a9e6",
+      "percentage": 0.039
+    },
+    {
+      "name": "Batchfile",
+      "bytes": 17062,
+      "color": "#C1F12E",
+      "percentage": 0.0311
+    },
+    {
+      "name": "Mathematica",
+      "bytes": 15479,
+      "color": "#dd1100",
+      "percentage": 0.0282
+    },
+    {
+      "name": "GLSL",
+      "bytes": 8590,
+      "color": "#5686a5",
+      "percentage": 0.0157
+    }
+  ],
+  "filters": {
+    "includeForks": false,
+    "includeArchived": false,
+    "excludedRepositories": [],
+    "excludedLanguages": []
+  }
+}

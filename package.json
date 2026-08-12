@@ -1,0 +1,12 @@
+{
+  "name": "onovich-profile",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "generate:toplangs": "node scripts/toplang/cli.mjs",
+    "test": "node --test scripts/toplang/tests/*.test.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
