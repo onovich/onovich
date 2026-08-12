@@ -3,91 +3,91 @@
   "username": "onovich",
   "repositoryCount": 166,
   "includedRepositoryCount": 166,
-  "totalBytes": 54803564,
+  "totalBytes": 54861275,
   "languages": [
     {
       "name": "TypeScript",
       "bytes": 18035190,
       "color": "#3178c6",
-      "percentage": 32.9088
+      "percentage": 32.8742
     },
     {
       "name": "C#",
       "bytes": 17683906,
       "color": "#178600",
-      "percentage": 32.2678
+      "percentage": 32.2339
     },
     {
       "name": "JavaScript",
-      "bytes": 9995100,
+      "bytes": 10052811,
       "color": "#f1e05a",
-      "percentage": 18.238
+      "percentage": 18.3241
     },
     {
       "name": "HTML",
       "bytes": 3686969,
       "color": "#e34c26",
-      "percentage": 6.7276
+      "percentage": 6.7205
     },
     {
       "name": "Python",
       "bytes": 2569208,
       "color": "#3572A5",
-      "percentage": 4.688
+      "percentage": 4.6831
     },
     {
       "name": "CSS",
       "bytes": 848508,
       "color": "#663399",
-      "percentage": 1.5483
+      "percentage": 1.5466
     },
     {
       "name": "PowerShell",
       "bytes": 770998,
       "color": "#012456",
-      "percentage": 1.4068
+      "percentage": 1.4054
     },
     {
       "name": "ShaderLab",
       "bytes": 426424,
       "color": "#222c37",
-      "percentage": 0.7781
+      "percentage": 0.7773
     },
     {
       "name": "C",
       "bytes": 398903,
       "color": "#555555",
-      "percentage": 0.7279
+      "percentage": 0.7271
     },
     {
       "name": "Shell",
       "bytes": 85443,
       "color": "#89e051",
-      "percentage": 0.1559
+      "percentage": 0.1557
     },
     {
       "name": "HLSL",
       "bytes": 59943,
       "color": "#aace60",
-      "percentage": 0.1094
+      "percentage": 0.1093
     },
     {
       "name": "GDScript",
       "bytes": 54219,
       "color": "#355570",
-      "percentage": 0.0989
+      "percentage": 0.0988
     },
     {
       "name": "Astro",
       "bytes": 42338,
       "color": "#ff5a03",
-      "percentage": 0.0773
+      "percentage": 0.0772
     },
     {
       "name": "Swift",
       "bytes": 33316,
       "color": "#F05138",
-      "percentage": 0.0608
+      "percentage": 0.0607
     },
     {
       "name": "Rust",
@@ -99,7 +99,7 @@
       "name": "CMake",
       "bytes": 24155,
       "color": "#DA3434",
-      "percentage": 0.0441
+      "percentage": 0.044
     },
     {
       "name": "MiniZinc",

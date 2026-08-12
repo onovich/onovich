@@ -14,30 +14,30 @@
   <text class="label" x="42" y="58">TypeScript</text>
   <text class="percent" text-anchor="end" x="376" y="58">32.9%</text>
   <rect class="track" x="24" y="67" width="352" height="6" rx="3"/>
-  <rect x="24" y="67" width="115.84" height="6" rx="3" fill="#3178c6"/>
+  <rect x="24" y="67" width="115.72" height="6" rx="3" fill="#3178c6"/>
   <circle cx="29" cy="92" r="5" fill="#178600"/>
   <text class="label" x="42" y="96">C#</text>
-  <text class="percent" text-anchor="end" x="376" y="96">32.3%</text>
+  <text class="percent" text-anchor="end" x="376" y="96">32.2%</text>
   <rect class="track" x="24" y="105" width="352" height="6" rx="3"/>
-  <rect x="24" y="105" width="113.58" height="6" rx="3" fill="#178600"/>
+  <rect x="24" y="105" width="113.46" height="6" rx="3" fill="#178600"/>
   <circle cx="29" cy="130" r="5" fill="#f1e05a"/>
   <text class="label" x="42" y="134">JavaScript</text>
-  <text class="percent" text-anchor="end" x="376" y="134">18.2%</text>
+  <text class="percent" text-anchor="end" x="376" y="134">18.3%</text>
   <rect class="track" x="24" y="143" width="352" height="6" rx="3"/>
-  <rect x="24" y="143" width="64.2" height="6" rx="3" fill="#f1e05a"/>
+  <rect x="24" y="143" width="64.5" height="6" rx="3" fill="#f1e05a"/>
   <circle cx="29" cy="168" r="5" fill="#e34c26"/>
   <text class="label" x="42" y="172">HTML</text>
   <text class="percent" text-anchor="end" x="376" y="172">6.7%</text>
   <rect class="track" x="24" y="181" width="352" height="6" rx="3"/>
-  <rect x="24" y="181" width="23.68" height="6" rx="3" fill="#e34c26"/>
+  <rect x="24" y="181" width="23.66" height="6" rx="3" fill="#e34c26"/>
   <circle cx="29" cy="206" r="5" fill="#3572A5"/>
   <text class="label" x="42" y="210">Python</text>
   <text class="percent" text-anchor="end" x="376" y="210">4.7%</text>
   <rect class="track" x="24" y="219" width="352" height="6" rx="3"/>
-  <rect x="24" y="219" width="16.5" height="6" rx="3" fill="#3572A5"/>
+  <rect x="24" y="219" width="16.48" height="6" rx="3" fill="#3572A5"/>
   <circle cx="29" cy="244" r="5" fill="#663399"/>
   <text class="label" x="42" y="248">CSS</text>
   <text class="percent" text-anchor="end" x="376" y="248">1.5%</text>
   <rect class="track" x="24" y="257" width="352" height="6" rx="3"/>
-  <rect x="24" y="257" width="5.45" height="6" rx="3" fill="#663399"/>
+  <rect x="24" y="257" width="5.44" height="6" rx="3" fill="#663399"/>
 </svg>
