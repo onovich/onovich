@@ -42,13 +42,13 @@
   <text class="group-title" x="436" y="84">Vibe Coding</text>
   <text class="group-share" text-anchor="end" x="776" y="84">67.1% OF BYTES</text>
   <rect x="24" y="96" width="752" height="10" rx="5" fill="#c9dce8"/>
-  <g data-role="coding-overview-part" data-group="manual" data-share="32.9467">
-    <rect x="24" y="96" width="247.76" height="10" rx="5" fill="#fd7136"/>
+  <g data-role="coding-overview-part" data-group="manual" data-share="32.9356">
+    <rect x="24" y="96" width="247.68" height="10" rx="5" fill="#fd7136"/>
   </g>
-  <g data-role="coding-overview-part" data-group="vibe" data-share="67.0533">
-    <rect x="271.76" y="96" width="504.24" height="10" rx="5" fill="#024b81"/>
+  <g data-role="coding-overview-part" data-group="vibe" data-share="67.0644">
+    <rect x="271.68" y="96" width="504.32" height="10" rx="5" fill="#024b81"/>
   </g>
-  <line x1="271.76" y1="95" x2="271.76" y2="107" stroke="#fef7ef" stroke-width="2"/>
+  <line x1="271.68" y1="95" x2="271.68" y2="107" stroke="#fef7ef" stroke-width="2"/>
   <line x1="400" y1="120" x2="400" y2="337" stroke="#a9c9dc" stroke-width="1" opacity="0.72"/>
   <g data-role="coding-group" data-group="manual" transform="translate(0 45)">
   <g data-role="ribbon-part">
@@ -76,17 +76,17 @@
   </g>
   <g data-role="coding-group" data-group="vibe" transform="translate(400 45)">
   <g data-role="ribbon-part">
-    <rect data-role="composition-part" data-language="TypeScript" data-share="48.7467" x="24" y="82" width="171.59" height="78" fill="#024b81" stroke="#fef7ef" stroke-width="2"/>
+    <rect data-role="composition-part" data-language="TypeScript" data-share="48.7223" x="24" y="82" width="171.5" height="78" fill="#024b81" stroke="#fef7ef" stroke-width="2"/>
     <text class="part-label" x="34" y="112" fill="#ffffff">TypeScript</text>
     <text class="part-value" x="34" y="133" fill="#ffffff">48.7%</text>
-    <rect data-role="composition-part" data-language="JavaScript" data-share="27.584" x="195.59" y="82" width="97.1" height="78" fill="#27669f" stroke="#fef7ef" stroke-width="2"/>
-    <text class="part-label" x="205.59" y="112" fill="#ffffff">JavaScript</text>
-    <text class="part-value" x="205.59" y="133" fill="#ffffff">27.6%</text>
-    <rect data-role="composition-part" data-language="HTML" data-share="10.3093" x="292.68" y="82" width="36.29" height="78" fill="#6faddf" stroke="#fef7ef" stroke-width="2"/>
-    <rect data-role="composition-part" data-language="Python" data-share="6.9442" x="328.97" y="82" width="24.44" height="78" fill="#9ac7e7" stroke="#fef7ef" stroke-width="2"/>
-    <rect data-role="composition-part" data-language="CSS" data-share="2.2973" x="353.42" y="82" width="8.09" height="78" fill="#c9dce8" stroke="#fef7ef" stroke-width="2"/>
-    <rect data-role="composition-part" data-language="PowerShell" data-share="2.1759" x="361.5" y="82" width="7.66" height="78" fill="#598fb8" stroke="#fef7ef" stroke-width="2"/>
-    <rect data-role="composition-part" data-language="Other" data-share="1.9426" x="369.16" y="82" width="6.84" height="78" fill="#dce9f1" stroke="#fef7ef" stroke-width="2"/>
+    <rect data-role="composition-part" data-language="JavaScript" data-share="27.599" x="195.5" y="82" width="97.15" height="78" fill="#27669f" stroke="#fef7ef" stroke-width="2"/>
+    <text class="part-label" x="205.5" y="112" fill="#ffffff">JavaScript</text>
+    <text class="part-value" x="205.5" y="133" fill="#ffffff">27.6%</text>
+    <rect data-role="composition-part" data-language="HTML" data-share="10.3254" x="292.65" y="82" width="36.35" height="78" fill="#6faddf" stroke="#fef7ef" stroke-width="2"/>
+    <rect data-role="composition-part" data-language="Python" data-share="6.9407" x="329" y="82" width="24.43" height="78" fill="#9ac7e7" stroke="#fef7ef" stroke-width="2"/>
+    <rect data-role="composition-part" data-language="CSS" data-share="2.2961" x="353.43" y="82" width="8.08" height="78" fill="#c9dce8" stroke="#fef7ef" stroke-width="2"/>
+    <rect data-role="composition-part" data-language="PowerShell" data-share="2.1748" x="361.51" y="82" width="7.66" height="78" fill="#598fb8" stroke="#fef7ef" stroke-width="2"/>
+    <rect data-role="composition-part" data-language="Other" data-share="1.9417" x="369.17" y="82" width="6.83" height="78" fill="#dce9f1" stroke="#fef7ef" stroke-width="2"/>
   </g>
   <g data-role="legend" data-columns="2">
     <circle cx="28" cy="190" r="4" fill="#024b81"/>

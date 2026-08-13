@@ -3,7 +3,7 @@
   "username": "onovich",
   "repositoryCount": 168,
   "includedRepositoryCount": 167,
-  "totalBytes": 55176649,
+  "totalBytes": 55195175,
   "repositoryScope": {
     "included": [
       "2048",
@@ -188,61 +188,61 @@
       "name": "TypeScript",
       "bytes": 18035190,
       "color": "#3178c6",
-      "percentage": 32.6863
+      "percentage": 32.6753
     },
     {
       "name": "C#",
       "bytes": 17683906,
       "color": "#178600",
-      "percentage": 32.0496
+      "percentage": 32.0389
     },
     {
       "name": "JavaScript",
-      "bytes": 10205462,
+      "bytes": 10216121,
       "color": "#f1e05a",
-      "percentage": 18.496
+      "percentage": 18.5091
     },
     {
       "name": "HTML",
-      "bytes": 3814217,
+      "bytes": 3822084,
       "color": "#e34c26",
-      "percentage": 6.9127
+      "percentage": 6.9247
     },
     {
       "name": "Python",
       "bytes": 2569208,
       "color": "#3572A5",
-      "percentage": 4.6563
+      "percentage": 4.6548
     },
     {
       "name": "CSS",
       "bytes": 849934,
       "color": "#663399",
-      "percentage": 1.5404
+      "percentage": 1.5399
     },
     {
       "name": "PowerShell",
       "bytes": 805047,
       "color": "#012456",
-      "percentage": 1.459
+      "percentage": 1.4585
     },
     {
       "name": "ShaderLab",
       "bytes": 426424,
       "color": "#222c37",
-      "percentage": 0.7728
+      "percentage": 0.7726
     },
     {
       "name": "C",
       "bytes": 398903,
       "color": "#555555",
-      "percentage": 0.723
+      "percentage": 0.7227
     },
     {
       "name": "Shell",
       "bytes": 85443,
       "color": "#89e051",
-      "percentage": 0.1549
+      "percentage": 0.1548
     },
     {
       "name": "HLSL",
@@ -254,7 +254,7 @@
       "name": "GDScript",
       "bytes": 54219,
       "color": "#355570",
-      "percentage": 0.0983
+      "percentage": 0.0982
     },
     {
       "name": "Astro",
@@ -296,7 +296,7 @@
       "name": "Mathematica",
       "bytes": 15479,
       "color": "#dd1100",
-      "percentage": 0.0281
+      "percentage": 0.028
     },
     {
       "name": "GLSL",
@@ -317,7 +317,7 @@
     "groups": {
       "manual": {
         "totalBytes": 18178863,
-        "percentage": 32.9467,
+        "percentage": 32.9356,
         "languages": [
           "C#",
           "ShaderLab",
@@ -326,8 +326,8 @@
         ]
       },
       "vibe": {
-        "totalBytes": 36997786,
-        "percentage": 67.0533,
+        "totalBytes": 37016312,
+        "percentage": 67.0644,
         "languages": [
           "TypeScript",
           "JavaScript",
