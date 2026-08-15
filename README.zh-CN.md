@@ -36,5 +36,3 @@ GitHub 展示的是我能够公开分享的部分：系统、工具、实验项�
 ## 联系
 
 欢迎交流玩法系统、运行时架构、Unity 工具、编辑器、图形技术和技术合作。可以从 [onovich.com](https://onovich.com/) 开始了解我。
-
-> The way of the blade is the way of the narrow gate.

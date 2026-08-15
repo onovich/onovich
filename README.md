@@ -36,5 +36,3 @@ These projects show how I use AI-assisted workflows around engineering work; the
 ## Let’s talk
 
 I am interested in thoughtful conversations about gameplay systems, runtime architecture, Unity tooling, editors, graphics, and technical collaboration. The best starting point is [onovich.com](https://onovich.com/).
-
-> The way of the blade is the way of the narrow gate.
