@@ -22,7 +22,7 @@ GitHub shows the part of my work I can share publicly: systems, tools, experimen
 - **[Pulse](https://github.com/onovich/Pulse)** — an experimental 2D physics engine for C# and Unity with an explicit simulation loop, collision pairs, response, and events.
 - **[PrismDraft](https://github.com/onovich/PrismDraft)** — a C11 modeling and rendering prototype exploring low-poly hard-surface forms, shaders, editor behavior, and visual validation.
 - **[LitIO](https://github.com/onovich/LitIO) → [Rill](https://github.com/onovich/Rill)** — a small binary serialization library and a typed TCP client/server layer built on top of it.
-- **[EaseTween](https://github.com/onovich/EaseTween)** — a data-oriented Unity tween runner with an explicit tick loop and caller-owned scene updates.
+- **[EaseTween](https://github.com/onovich/EaseTween)** — a data-oriented Unity tween runner with measured GC-free steady-state updates after setup.
 
 These repositories are at different stages. Their READMEs state what is implemented, what remains experimental, and what should not yet be treated as production-ready.
 

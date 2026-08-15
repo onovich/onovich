@@ -22,7 +22,7 @@ GitHub 展示的是我能够公开分享的部分：系统、工具、实验项�
 - **[Pulse](https://github.com/onovich/Pulse)** — 面向 C# 与 Unity 的实验性 2D 物理引擎，包含显式模拟循环、碰撞组合、响应和事件。
 - **[PrismDraft](https://github.com/onovich/PrismDraft)** — 使用 C11 开发的建模与渲染原型，探索低多边形硬表面造型、Shader、编辑器行为和视觉验证。
 - **[LitIO](https://github.com/onovich/LitIO) → [Rill](https://github.com/onovich/Rill)** — 小型二进制序列化库，以及建立在它之上的强类型 TCP 客户端与服务端层。
-- **[EaseTween](https://github.com/onovich/EaseTween)** — 数据导向的 Unity Tween 运行器，通过显式 Tick 更新，并由调用方控制场景对象。
+- **[EaseTween](https://github.com/onovich/EaseTween)** — 数据导向的 Unity Tween 运行器，初始化和预热后的稳定更新阶段通过了零 GC 实测。
 
 这些仓库处在不同阶段。各自的 README 会说明已经实现的内容、仍属实验性的部分，以及哪些能力还不适合按生产级使用。
 
