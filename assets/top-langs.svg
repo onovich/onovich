@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title description" data-style="ribbon" data-theme="paper" data-coding-mode="split" width="800" height="361" viewBox="0 0 800 361">
   <title id="title">Most Used Languages</title>
-  <desc id="description">User-declared coding groups across 163 of 164 public repositories. Manual Coding is 34.2% of all language bytes; within this group: C#: 97.3%; ShaderLab: 2.3%; HLSL: 0.3%; GLSL: &lt;0.1%. Vibe Coding is 65.8% of all language bytes; within this group: TypeScript: 44.1%; JavaScript: 26.4%; Python: 12.3%; HTML: 11.0%; PowerShell: 2.2%; CSS: 2.1%; Other: 2.0%.</desc>
+  <desc id="description">User-declared coding groups across 163 of 164 public repositories. Manual Coding is 35.4% of all language bytes; within this group: C#: 97.3%; ShaderLab: 2.3%; HLSL: 0.3%; GLSL: &lt;0.1%. Vibe Coding is 64.6% of all language bytes; within this group: TypeScript: 46.2%; JavaScript: 27.3%; Python: 12.9%; HTML: 7.1%; PowerShell: 2.4%; CSS: 2.1%; Other: 2.0%.</desc>
   <style>
     text { font-family: -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif; }
     .title { fill: #024b81; font-size: 17px; font-weight: 700; letter-spacing: -0.2px; }
@@ -37,18 +37,18 @@
   <text class="brand-watermark" data-role="brand-watermark" text-anchor="end" x="776" y="29" aria-hidden="true">RepoPalette</text>
   <circle cx="26" cy="80" r="3" fill="#fd7136"/>
   <text class="group-title" x="36" y="84">Manual Coding</text>
-  <text class="group-share" text-anchor="end" x="376" y="84">34.2% OF BYTES</text>
+  <text class="group-share" text-anchor="end" x="376" y="84">35.4% OF BYTES</text>
   <circle cx="426" cy="80" r="3" fill="#024b81"/>
   <text class="group-title" x="436" y="84">Vibe Coding</text>
-  <text class="group-share" text-anchor="end" x="776" y="84">65.8% OF BYTES</text>
+  <text class="group-share" text-anchor="end" x="776" y="84">64.6% OF BYTES</text>
   <rect x="24" y="96" width="752" height="10" rx="5" fill="#c9dce8"/>
-  <g data-role="coding-overview-part" data-group="manual" data-share="34.2372">
-    <rect x="24" y="96" width="257.46" height="10" rx="5" fill="#fd7136"/>
+  <g data-role="coding-overview-part" data-group="manual" data-share="35.3973">
+    <rect x="24" y="96" width="266.19" height="10" rx="5" fill="#fd7136"/>
   </g>
-  <g data-role="coding-overview-part" data-group="vibe" data-share="65.7628">
-    <rect x="281.46" y="96" width="494.54" height="10" rx="5" fill="#024b81"/>
+  <g data-role="coding-overview-part" data-group="vibe" data-share="64.6027">
+    <rect x="290.19" y="96" width="485.81" height="10" rx="5" fill="#024b81"/>
   </g>
-  <line x1="281.46" y1="95" x2="281.46" y2="107" stroke="#fef7ef" stroke-width="2"/>
+  <line x1="290.19" y1="95" x2="290.19" y2="107" stroke="#fef7ef" stroke-width="2"/>
   <line x1="400" y1="120" x2="400" y2="337" stroke="#a9c9dc" stroke-width="1" opacity="0.72"/>
   <g data-role="coding-group" data-group="manual" transform="translate(0 45)">
   <g data-role="ribbon-part">
@@ -76,34 +76,34 @@
   </g>
   <g data-role="coding-group" data-group="vibe" transform="translate(400 45)">
   <g data-role="ribbon-part">
-    <rect data-role="composition-part" data-language="TypeScript" data-share="44.0502" x="24" y="82" width="155.06" height="78" fill="#024b81" stroke="#fef7ef" stroke-width="2"/>
+    <rect data-role="composition-part" data-language="TypeScript" data-share="46.1784" x="24" y="82" width="162.55" height="78" fill="#024b81" stroke="#fef7ef" stroke-width="2"/>
     <text class="part-label" x="34" y="112" fill="#ffffff">TypeScript</text>
-    <text class="part-value" x="34" y="133" fill="#ffffff">44.1%</text>
-    <rect data-role="composition-part" data-language="JavaScript" data-share="26.3818" x="179.06" y="82" width="92.86" height="78" fill="#27669f" stroke="#fef7ef" stroke-width="2"/>
-    <text class="part-label" x="189.06" y="112" fill="#ffffff">JavaScript</text>
-    <text class="part-value" x="189.06" y="133" fill="#ffffff">26.4%</text>
-    <rect data-role="composition-part" data-language="Python" data-share="12.3413" x="271.92" y="82" width="43.44" height="78" fill="#6faddf" stroke="#fef7ef" stroke-width="2"/>
-    <rect data-role="composition-part" data-language="HTML" data-share="10.9748" x="315.36" y="82" width="38.63" height="78" fill="#9ac7e7" stroke="#fef7ef" stroke-width="2"/>
-    <rect data-role="composition-part" data-language="PowerShell" data-share="2.2469" x="353.99" y="82" width="7.91" height="78" fill="#c9dce8" stroke="#fef7ef" stroke-width="2"/>
-    <rect data-role="composition-part" data-language="CSS" data-share="2.0521" x="361.9" y="82" width="7.22" height="78" fill="#598fb8" stroke="#fef7ef" stroke-width="2"/>
-    <rect data-role="composition-part" data-language="Other" data-share="1.9529" x="369.13" y="82" width="6.87" height="78" fill="#dce9f1" stroke="#fef7ef" stroke-width="2"/>
+    <text class="part-value" x="34" y="133" fill="#ffffff">46.2%</text>
+    <rect data-role="composition-part" data-language="JavaScript" data-share="27.3476" x="186.55" y="82" width="96.26" height="78" fill="#27669f" stroke="#fef7ef" stroke-width="2"/>
+    <text class="part-label" x="196.55" y="112" fill="#ffffff">JavaScript</text>
+    <text class="part-value" x="196.55" y="133" fill="#ffffff">27.3%</text>
+    <rect data-role="composition-part" data-language="Python" data-share="12.9427" x="282.81" y="82" width="45.56" height="78" fill="#6faddf" stroke="#fef7ef" stroke-width="2"/>
+    <rect data-role="composition-part" data-language="HTML" data-share="7.0505" x="328.37" y="82" width="24.82" height="78" fill="#9ac7e7" stroke="#fef7ef" stroke-width="2"/>
+    <rect data-role="composition-part" data-language="PowerShell" data-share="2.3817" x="353.19" y="82" width="8.38" height="78" fill="#c9dce8" stroke="#fef7ef" stroke-width="2"/>
+    <rect data-role="composition-part" data-language="CSS" data-share="2.0574" x="361.57" y="82" width="7.24" height="78" fill="#598fb8" stroke="#fef7ef" stroke-width="2"/>
+    <rect data-role="composition-part" data-language="Other" data-share="2.0417" x="368.81" y="82" width="7.19" height="78" fill="#dce9f1" stroke="#fef7ef" stroke-width="2"/>
   </g>
   <g data-role="legend" data-columns="2">
     <circle cx="28" cy="190" r="4" fill="#024b81"/>
     <text class="legend-label" x="40" y="194">TypeScript</text>
-    <text class="legend-value" text-anchor="end" x="188" y="194">44.1%</text>
+    <text class="legend-value" text-anchor="end" x="188" y="194">46.2%</text>
     <circle cx="212" cy="190" r="4" fill="#27669f"/>
     <text class="legend-label" x="224" y="194">JavaScript</text>
-    <text class="legend-value" text-anchor="end" x="372" y="194">26.4%</text>
+    <text class="legend-value" text-anchor="end" x="372" y="194">27.3%</text>
     <circle cx="28" cy="216" r="4" fill="#6faddf"/>
     <text class="legend-label" x="40" y="220">Python</text>
-    <text class="legend-value" text-anchor="end" x="188" y="220">12.3%</text>
+    <text class="legend-value" text-anchor="end" x="188" y="220">12.9%</text>
     <circle cx="212" cy="216" r="4" fill="#9ac7e7"/>
     <text class="legend-label" x="224" y="220">HTML</text>
-    <text class="legend-value" text-anchor="end" x="372" y="220">11.0%</text>
+    <text class="legend-value" text-anchor="end" x="372" y="220">7.1%</text>
     <circle cx="28" cy="242" r="4" fill="#c9dce8"/>
     <text class="legend-label" x="40" y="246">PowerShell</text>
-    <text class="legend-value" text-anchor="end" x="188" y="246">2.2%</text>
+    <text class="legend-value" text-anchor="end" x="188" y="246">2.4%</text>
     <circle cx="212" cy="242" r="4" fill="#598fb8"/>
     <text class="legend-label" x="224" y="246">CSS</text>
     <text class="legend-value" text-anchor="end" x="372" y="246">2.1%</text>
