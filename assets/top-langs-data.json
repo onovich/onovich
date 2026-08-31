@@ -1,9 +1,9 @@
 {
   "schemaVersion": 3,
   "username": "onovich",
-  "repositoryCount": 164,
-  "includedRepositoryCount": 163,
-  "totalBytes": 51337245,
+  "repositoryCount": 167,
+  "includedRepositoryCount": 166,
+  "totalBytes": 52301652,
   "repositoryScope": {
     "included": [
       "2048",
@@ -24,6 +24,7 @@
       "Beat",
       "BioFlux",
       "BionicFusionLab",
+      "BladeTrace",
       "BoidsSample",
       "Bubbles",
       "Buzz",
@@ -70,6 +71,7 @@
       "JustGoal.skill",
       "JustKeepPathing",
       "Keshi",
+      "King-Varos-Table",
       "Knot",
       "LabyrinthComposer",
       "Lancet",
@@ -101,6 +103,7 @@
       "Oboro",
       "Orbit",
       "Oshi",
+      "Oshi-Sokoban-Lab",
       "Paradox",
       "Phantom",
       "Ping",
@@ -183,110 +186,116 @@
     {
       "name": "C#",
       "bytes": 17677065,
-      "color": "#178600",
-      "percentage": 34.4332
+      "color": "#7355dd",
+      "percentage": 33.7983
     },
     {
       "name": "TypeScript",
-      "bytes": 15315160,
+      "bytes": 15471961,
       "color": "#3178c6",
-      "percentage": 29.8325
+      "percentage": 29.5822
     },
     {
       "name": "JavaScript",
-      "bytes": 9069909,
+      "bytes": 9361127,
       "color": "#f1e05a",
-      "percentage": 17.6673
+      "percentage": 17.8983
     },
     {
       "name": "Python",
-      "bytes": 4292479,
+      "bytes": 4465623,
       "color": "#3572A5",
-      "percentage": 8.3613
+      "percentage": 8.5382
     },
     {
       "name": "HTML",
-      "bytes": 2338317,
+      "bytes": 2587632,
       "color": "#e34c26",
-      "percentage": 4.5548
+      "percentage": 4.9475
     },
     {
       "name": "PowerShell",
-      "bytes": 789886,
+      "bytes": 802900,
       "color": "#012456",
-      "percentage": 1.5386
+      "percentage": 1.5351
     },
     {
       "name": "CSS",
-      "bytes": 682345,
+      "bytes": 754690,
       "color": "#663399",
-      "percentage": 1.3291
+      "percentage": 1.443
     },
     {
       "name": "ShaderLab",
       "bytes": 426424,
       "color": "#222c37",
-      "percentage": 0.8306
+      "percentage": 0.8153
     },
     {
       "name": "C",
       "bytes": 398903,
       "color": "#555555",
-      "percentage": 0.777
+      "percentage": 0.7627
     },
     {
       "name": "Shell",
       "bytes": 90956,
       "color": "#89e051",
-      "percentage": 0.1772
+      "percentage": 0.1739
     },
     {
       "name": "HLSL",
       "bytes": 59943,
       "color": "#aace60",
-      "percentage": 0.1168
+      "percentage": 0.1146
     },
     {
       "name": "GDScript",
       "bytes": 54219,
       "color": "#355570",
-      "percentage": 0.1056
+      "percentage": 0.1037
+    },
+    {
+      "name": "Astro",
+      "bytes": 40068,
+      "color": "#ff5a03",
+      "percentage": 0.0766
     },
     {
       "name": "Swift",
       "bytes": 33316,
       "color": "#F05138",
-      "percentage": 0.0649
-    },
-    {
-      "name": "Astro",
-      "bytes": 32011,
-      "color": "#ff5a03",
-      "percentage": 0.0624
+      "percentage": 0.0637
     },
     {
       "name": "Rust",
       "bytes": 26437,
       "color": "#dea584",
-      "percentage": 0.0515
+      "percentage": 0.0505
     },
     {
       "name": "CMake",
       "bytes": 24155,
       "color": "#DA3434",
-      "percentage": 0.0471
+      "percentage": 0.0462
     },
     {
       "name": "Batchfile",
       "bytes": 17130,
       "color": "#C1F12E",
-      "percentage": 0.0334
+      "percentage": 0.0328
     },
     {
       "name": "GLSL",
       "bytes": 8590,
       "color": "#5686a5",
-      "percentage": 0.0167
+      "percentage": 0.0164
+    },
+    {
+      "name": "MiniZinc",
+      "bytes": 513,
+      "color": "#06a9e6",
+      "percentage": 0.001
     }
   ],
   "classification": {
@@ -301,7 +310,7 @@
     "groups": {
       "manual": {
         "totalBytes": 18172022,
-        "percentage": 35.3973,
+        "percentage": 34.7446,
         "languages": [
           "C#",
           "ShaderLab",
@@ -310,8 +319,8 @@
         ]
       },
       "vibe": {
-        "totalBytes": 33165223,
-        "percentage": 64.6027,
+        "totalBytes": 34129630,
+        "percentage": 65.2554,
         "languages": [
           "TypeScript",
           "JavaScript",
@@ -322,11 +331,12 @@
           "C",
           "Shell",
           "GDScript",
-          "Swift",
           "Astro",
+          "Swift",
           "Rust",
           "CMake",
-          "Batchfile"
+          "Batchfile",
+          "MiniZinc"
         ]
       }
     }
