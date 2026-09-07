@@ -1,9 +1,9 @@
 {
   "schemaVersion": 3,
   "username": "onovich",
-  "repositoryCount": 167,
-  "includedRepositoryCount": 166,
-  "totalBytes": 52301652,
+  "repositoryCount": 169,
+  "includedRepositoryCount": 168,
+  "totalBytes": 53190031,
   "repositoryScope": {
     "included": [
       "2048",
@@ -116,6 +116,7 @@
       "RaylibPlayground",
       "RepoCover",
       "RepoPalette",
+      "RepoPanorama",
       "RepoReadme",
       "Research",
       "ResonanceLab",
@@ -171,7 +172,8 @@
       "fix-codex-lag.skill",
       "goal-next.skill",
       "onovich",
-      "onovich.github.io"
+      "onovich.github.io",
+      "what-can-my-mac-play"
     ],
     "excluded": [
       {
@@ -187,109 +189,109 @@
       "name": "C#",
       "bytes": 17677065,
       "color": "#7355dd",
-      "percentage": 33.7983
+      "percentage": 33.2338
     },
     {
       "name": "TypeScript",
-      "bytes": 15471961,
+      "bytes": 15957991,
       "color": "#3178c6",
-      "percentage": 29.5822
+      "percentage": 30.0018
     },
     {
       "name": "JavaScript",
-      "bytes": 9361127,
+      "bytes": 9494837,
       "color": "#f1e05a",
-      "percentage": 17.8983
+      "percentage": 17.8508
     },
     {
       "name": "Python",
-      "bytes": 4465623,
+      "bytes": 4575753,
       "color": "#3572A5",
-      "percentage": 8.5382
+      "percentage": 8.6027
     },
     {
       "name": "HTML",
-      "bytes": 2587632,
+      "bytes": 2672076,
       "color": "#e34c26",
-      "percentage": 4.9475
-    },
-    {
-      "name": "PowerShell",
-      "bytes": 802900,
-      "color": "#012456",
-      "percentage": 1.5351
+      "percentage": 5.0236
     },
     {
       "name": "CSS",
-      "bytes": 754690,
+      "bytes": 810921,
       "color": "#663399",
-      "percentage": 1.443
+      "percentage": 1.5246
+    },
+    {
+      "name": "PowerShell",
+      "bytes": 803511,
+      "color": "#012456",
+      "percentage": 1.5106
     },
     {
       "name": "ShaderLab",
       "bytes": 426424,
       "color": "#222c37",
-      "percentage": 0.8153
+      "percentage": 0.8017
     },
     {
       "name": "C",
       "bytes": 398903,
       "color": "#555555",
-      "percentage": 0.7627
+      "percentage": 0.75
     },
     {
       "name": "Shell",
       "bytes": 90956,
       "color": "#89e051",
-      "percentage": 0.1739
+      "percentage": 0.171
     },
     {
       "name": "HLSL",
       "bytes": 59943,
       "color": "#aace60",
-      "percentage": 0.1146
+      "percentage": 0.1127
+    },
+    {
+      "name": "Astro",
+      "bytes": 57291,
+      "color": "#ff5a03",
+      "percentage": 0.1077
     },
     {
       "name": "GDScript",
       "bytes": 54219,
       "color": "#355570",
-      "percentage": 0.1037
-    },
-    {
-      "name": "Astro",
-      "bytes": 40068,
-      "color": "#ff5a03",
-      "percentage": 0.0766
+      "percentage": 0.1019
     },
     {
       "name": "Swift",
       "bytes": 33316,
       "color": "#F05138",
-      "percentage": 0.0637
+      "percentage": 0.0626
     },
     {
       "name": "Rust",
       "bytes": 26437,
       "color": "#dea584",
-      "percentage": 0.0505
+      "percentage": 0.0497
     },
     {
       "name": "CMake",
       "bytes": 24155,
       "color": "#DA3434",
-      "percentage": 0.0462
+      "percentage": 0.0454
     },
     {
       "name": "Batchfile",
       "bytes": 17130,
       "color": "#C1F12E",
-      "percentage": 0.0328
+      "percentage": 0.0322
     },
     {
       "name": "GLSL",
       "bytes": 8590,
       "color": "#5686a5",
-      "percentage": 0.0164
+      "percentage": 0.0161
     },
     {
       "name": "MiniZinc",
@@ -310,7 +312,7 @@
     "groups": {
       "manual": {
         "totalBytes": 18172022,
-        "percentage": 34.7446,
+        "percentage": 34.1643,
         "languages": [
           "C#",
           "ShaderLab",
@@ -319,19 +321,19 @@
         ]
       },
       "vibe": {
-        "totalBytes": 34129630,
-        "percentage": 65.2554,
+        "totalBytes": 35018009,
+        "percentage": 65.8357,
         "languages": [
           "TypeScript",
           "JavaScript",
           "Python",
           "HTML",
-          "PowerShell",
           "CSS",
+          "PowerShell",
           "C",
           "Shell",
-          "GDScript",
           "Astro",
+          "GDScript",
           "Swift",
           "Rust",
           "CMake",
