@@ -3,7 +3,7 @@
   "username": "onovich",
   "repositoryCount": 175,
   "includedRepositoryCount": 174,
-  "totalBytes": 58018338,
+  "totalBytes": 58067755,
   "repositoryScope": {
     "included": [
       "2048",
@@ -195,85 +195,85 @@
       "name": "C#",
       "bytes": 17692313,
       "color": "#7355dd",
-      "percentage": 30.4943
+      "percentage": 30.4684
     },
     {
       "name": "TypeScript",
       "bytes": 17283857,
       "color": "#3178c6",
-      "percentage": 29.7903
+      "percentage": 29.765
     },
     {
       "name": "JavaScript",
-      "bytes": 11523904,
+      "bytes": 11562945,
       "color": "#f1e05a",
-      "percentage": 19.8625
+      "percentage": 19.9129
     },
     {
       "name": "Python",
-      "bytes": 5012310,
+      "bytes": 5021151,
       "color": "#3572A5",
-      "percentage": 8.6392
+      "percentage": 8.6471
     },
     {
       "name": "HTML",
       "bytes": 3318203,
       "color": "#e34c26",
-      "percentage": 5.7192
+      "percentage": 5.7144
     },
     {
       "name": "CSS",
-      "bytes": 946139,
+      "bytes": 947674,
       "color": "#663399",
-      "percentage": 1.6308
+      "percentage": 1.632
     },
     {
       "name": "PowerShell",
       "bytes": 852270,
       "color": "#012456",
-      "percentage": 1.469
+      "percentage": 1.4677
     },
     {
       "name": "ShaderLab",
       "bytes": 433085,
       "color": "#222c37",
-      "percentage": 0.7465
+      "percentage": 0.7458
     },
     {
       "name": "C",
       "bytes": 398903,
       "color": "#555555",
-      "percentage": 0.6875
+      "percentage": 0.687
     },
     {
       "name": "Lua",
       "bytes": 172608,
       "color": "#000080",
-      "percentage": 0.2975
+      "percentage": 0.2973
     },
     {
       "name": "Shell",
       "bytes": 90956,
       "color": "#89e051",
-      "percentage": 0.1568
+      "percentage": 0.1566
     },
     {
       "name": "Astro",
       "bytes": 60336,
       "color": "#ff5a03",
-      "percentage": 0.104
+      "percentage": 0.1039
     },
     {
       "name": "HLSL",
       "bytes": 59943,
       "color": "#aace60",
-      "percentage": 0.1033
+      "percentage": 0.1032
     },
     {
       "name": "GDScript",
       "bytes": 54219,
       "color": "#355570",
-      "percentage": 0.0935
+      "percentage": 0.0934
     },
     {
       "name": "Swift",
@@ -285,7 +285,7 @@
       "name": "Rust",
       "bytes": 26437,
       "color": "#dea584",
-      "percentage": 0.0456
+      "percentage": 0.0455
     },
     {
       "name": "CMake",
@@ -297,7 +297,7 @@
       "name": "Batchfile",
       "bytes": 18316,
       "color": "#C1F12E",
-      "percentage": 0.0316
+      "percentage": 0.0315
     },
     {
       "name": "GLSL",
@@ -324,7 +324,7 @@
     "groups": {
       "manual": {
         "totalBytes": 18201896,
-        "percentage": 31.3727,
+        "percentage": 31.346,
         "languages": [
           "C#",
           "ShaderLab",
@@ -333,8 +333,8 @@
         ]
       },
       "vibe": {
-        "totalBytes": 39816442,
-        "percentage": 68.6273,
+        "totalBytes": 39865859,
+        "percentage": 68.654,
         "languages": [
           "TypeScript",
           "JavaScript",
