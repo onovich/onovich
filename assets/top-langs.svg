@@ -42,10 +42,10 @@
   <text class="group-title" x="436" y="84">Vibe Coding</text>
   <text class="group-share" text-anchor="end" x="776" y="84">68.7% OF BYTES</text>
   <rect x="24" y="96" width="752" height="10" rx="5" fill="#c9dce8"/>
-  <g data-role="coding-overview-part" data-group="manual" data-share="31.346">
+  <g data-role="coding-overview-part" data-group="manual" data-share="31.3457">
     <rect x="24" y="96" width="235.72" height="10" rx="5" fill="#fd7136"/>
   </g>
-  <g data-role="coding-overview-part" data-group="vibe" data-share="68.654">
+  <g data-role="coding-overview-part" data-group="vibe" data-share="68.6543">
     <rect x="259.72" y="96" width="516.28" height="10" rx="5" fill="#024b81"/>
   </g>
   <line x1="259.72" y1="95" x2="259.72" y2="107" stroke="#fef7ef" stroke-width="2"/>
@@ -76,17 +76,17 @@
   </g>
   <g data-role="coding-group" data-group="vibe" transform="translate(400 45)">
   <g data-role="ribbon-part">
-    <rect data-role="composition-part" data-language="TypeScript" data-share="43.355" x="24" y="82" width="152.61" height="78" fill="#024b81" stroke="#fef7ef" stroke-width="2"/>
+    <rect data-role="composition-part" data-language="TypeScript" data-share="43.3549" x="24" y="82" width="152.61" height="78" fill="#024b81" stroke="#fef7ef" stroke-width="2"/>
     <text class="part-label" x="34" y="112" fill="#ffffff">TypeScript</text>
     <text class="part-value" x="34" y="133" fill="#ffffff">43.4%</text>
-    <rect data-role="composition-part" data-language="JavaScript" data-share="29.0046" x="176.61" y="82" width="102.1" height="78" fill="#27669f" stroke="#fef7ef" stroke-width="2"/>
+    <rect data-role="composition-part" data-language="JavaScript" data-share="29.0043" x="176.61" y="82" width="102.1" height="78" fill="#27669f" stroke="#fef7ef" stroke-width="2"/>
     <text class="part-label" x="186.61" y="112" fill="#ffffff">JavaScript</text>
     <text class="part-value" x="186.61" y="133" fill="#ffffff">29.0%</text>
-    <rect data-role="composition-part" data-language="Python" data-share="12.5951" x="278.71" y="82" width="44.33" height="78" fill="#6faddf" stroke="#fef7ef" stroke-width="2"/>
-    <rect data-role="composition-part" data-language="HTML" data-share="8.3234" x="323.04" y="82" width="29.3" height="78" fill="#9ac7e7" stroke="#fef7ef" stroke-width="2"/>
-    <rect data-role="composition-part" data-language="CSS" data-share="2.3772" x="352.34" y="82" width="8.37" height="78" fill="#c9dce8" stroke="#fef7ef" stroke-width="2"/>
+    <rect data-role="composition-part" data-language="Python" data-share="12.595" x="278.7" y="82" width="44.33" height="78" fill="#6faddf" stroke="#fef7ef" stroke-width="2"/>
+    <rect data-role="composition-part" data-language="HTML" data-share="8.3233" x="323.04" y="82" width="29.3" height="78" fill="#9ac7e7" stroke="#fef7ef" stroke-width="2"/>
+    <rect data-role="composition-part" data-language="CSS" data-share="2.3773" x="352.34" y="82" width="8.37" height="78" fill="#c9dce8" stroke="#fef7ef" stroke-width="2"/>
     <rect data-role="composition-part" data-language="PowerShell" data-share="2.1378" x="360.71" y="82" width="7.53" height="78" fill="#598fb8" stroke="#fef7ef" stroke-width="2"/>
-    <rect data-role="composition-part" data-language="Other" data-share="2.2068" x="368.23" y="82" width="7.77" height="78" fill="#dce9f1" stroke="#fef7ef" stroke-width="2"/>
+    <rect data-role="composition-part" data-language="Other" data-share="2.2073" x="368.23" y="82" width="7.77" height="78" fill="#dce9f1" stroke="#fef7ef" stroke-width="2"/>
   </g>
   <g data-role="legend" data-columns="2">
     <circle cx="28" cy="190" r="4" fill="#024b81"/>

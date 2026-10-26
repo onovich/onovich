@@ -3,7 +3,7 @@
   "username": "onovich",
   "repositoryCount": 175,
   "includedRepositoryCount": 174,
-  "totalBytes": 58067755,
+  "totalBytes": 58068159,
   "repositoryScope": {
     "included": [
       "2048",
@@ -195,11 +195,11 @@
       "name": "C#",
       "bytes": 17692313,
       "color": "#7355dd",
-      "percentage": 30.4684
+      "percentage": 30.4682
     },
     {
       "name": "TypeScript",
-      "bytes": 17283857,
+      "bytes": 17283984,
       "color": "#3178c6",
       "percentage": 29.765
     },
@@ -207,25 +207,25 @@
       "name": "JavaScript",
       "bytes": 11562945,
       "color": "#f1e05a",
-      "percentage": 19.9129
+      "percentage": 19.9127
     },
     {
       "name": "Python",
       "bytes": 5021151,
       "color": "#3572A5",
-      "percentage": 8.6471
+      "percentage": 8.647
     },
     {
       "name": "HTML",
       "bytes": 3318203,
       "color": "#e34c26",
-      "percentage": 5.7144
+      "percentage": 5.7143
     },
     {
       "name": "CSS",
-      "bytes": 947674,
+      "bytes": 947730,
       "color": "#663399",
-      "percentage": 1.632
+      "percentage": 1.6321
     },
     {
       "name": "PowerShell",
@@ -259,9 +259,9 @@
     },
     {
       "name": "Astro",
-      "bytes": 60336,
+      "bytes": 60557,
       "color": "#ff5a03",
-      "percentage": 0.1039
+      "percentage": 0.1043
     },
     {
       "name": "HLSL",
@@ -324,7 +324,7 @@
     "groups": {
       "manual": {
         "totalBytes": 18201896,
-        "percentage": 31.346,
+        "percentage": 31.3457,
         "languages": [
           "C#",
           "ShaderLab",
@@ -333,8 +333,8 @@
         ]
       },
       "vibe": {
-        "totalBytes": 39865859,
-        "percentage": 68.654,
+        "totalBytes": 39866263,
+        "percentage": 68.6543,
         "languages": [
           "TypeScript",
           "JavaScript",
