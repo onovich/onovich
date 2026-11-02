@@ -12,17 +12,17 @@ GitHub 展示的是我能够公开分享的部分：系统、工具、实验项�
 
 ## 从这里开始
 
-| [Inscape](https://github.com/onovich/Inscape) | [2DProGolf](https://github.com/onovich/2DProGolf) |
+| [EaseTween](https://github.com/onovich/EaseTween) | [Vista](https://github.com/onovich/Vista) |
 | --- | --- |
-| [![Inscape cover](https://raw.githubusercontent.com/onovich/Inscape/main/docs/cover.png)](https://github.com/onovich/Inscape) | [![2DProGolf cover](https://raw.githubusercontent.com/onovich/2DProGolf/main/docs/cover.png)](https://github.com/onovich/2DProGolf) |
-| 面向分支叙事的脚本语言、编辑器与工具链，涉及语言实现、运行时、CLI、编辑器和集成工作，目前仍在持续开发。 | 围绕地形、风向、球杆选择和击球规划构建的程序化横版高尔夫原型，已经可以[在浏览器中试玩](https://blog.onovich.com/2DProGolf/)。 |
+| [![EaseTween cover](https://raw.githubusercontent.com/onovich/EaseTween/main/docs/cover.png)](https://github.com/onovich/EaseTween) | [![Vista cover](https://raw.githubusercontent.com/onovich/Vista/main/docs/cover.png)](https://github.com/onovich/Vista) |
+| 数据导向的 Unity Tween 运行器，使用显式 Tick 循环，由调用方管理场景对象的生命周期。一次专项 Unity 测量中，预热后的稳定更新阶段未观察到 GC 分配。 | 轻量 Unity 2D 相机库，包含跟随、死区与软区、世界边界、指定目标移动和震动。库负责计算相机位置，游戏保留对场景相机的控制。 |
 
 ## 游戏系统与工具
 
 - **[Pulse](https://github.com/onovich/Pulse)** — 面向 C# 与 Unity 的实验性 2D 物理引擎，包含显式模拟循环、碰撞组合、响应和事件。
-- **[PrismDraft](https://github.com/onovich/PrismDraft)** — 使用 C11 开发的建模与渲染原型，探索低多边形硬表面造型、Shader、编辑器行为和视觉验证。
-- **[LitIO](https://github.com/onovich/LitIO) → [Rill](https://github.com/onovich/Rill)** — 小型二进制序列化库，以及建立在它之上的强类型 TCP 客户端与服务端层。
-- **[EaseTween](https://github.com/onovich/EaseTween)** — 数据导向的 Unity Tween 运行器，初始化和预热后的稳定更新阶段通过了零 GC 实测。
+- **[Rill](https://github.com/onovich/Rill)** — 轻量 C# TCP 客户端与服务端层，包含类型消息、后台 Socket 收发，以及通过显式 Tick 驱动的主线程分发。
+- **[LitIO](https://github.com/onovich/LitIO)** — 紧凑的 C# 二进制序列化库，支持值类型、数组与 UTF-8 字符串，由调用方管理缓冲区和偏移。
+- **[Swing](https://github.com/onovich/Swing)** — 面向 Unity 的缓动、波形、样条与噪声函数集合，附有样例和测试。
 
 这些仓库处在不同阶段。各自的 README 会说明已经实现的内容、仍属实验性的部分，以及哪些能力还不适合按生产级使用。
 

@@ -12,17 +12,17 @@ GitHub shows the part of my work I can share publicly: systems, tools, experimen
 
 ## Start here
 
-| [Inscape](https://github.com/onovich/Inscape) | [2DProGolf](https://github.com/onovich/2DProGolf) |
+| [EaseTween](https://github.com/onovich/EaseTween) | [Vista](https://github.com/onovich/Vista) |
 | --- | --- |
-| [![Inscape cover](https://raw.githubusercontent.com/onovich/Inscape/main/docs/cover.png)](https://github.com/onovich/Inscape) | [![2DProGolf cover](https://raw.githubusercontent.com/onovich/2DProGolf/main/docs/cover.png)](https://github.com/onovich/2DProGolf) |
-| A scripting language, editor, and toolchain for branching narratives. It spans language implementation, runtime, CLI, editor, and integration work, and remains under active development. | A playable procedural side-view golf prototype built around terrain, wind, club choice, and shot planning. [Play it in the browser.](https://blog.onovich.com/2DProGolf/) |
+| [![EaseTween cover](https://raw.githubusercontent.com/onovich/EaseTween/main/docs/cover.png)](https://github.com/onovich/EaseTween) | [![Vista cover](https://raw.githubusercontent.com/onovich/Vista/main/docs/cover.png)](https://github.com/onovich/Vista) |
+| A data-oriented Unity tween runner with an explicit tick loop and scene lifecycle kept in the caller's control. A focused Unity probe measured no GC allocations in warmed-up steady-state updates. | A lightweight Unity 2D camera library for following, dead and soft zones, world bounds, scripted movement, and shake. It calculates camera positions while the game retains control of the scene camera. |
 
 ## Game systems and tools
 
 - **[Pulse](https://github.com/onovich/Pulse)** — an experimental 2D physics engine for C# and Unity with an explicit simulation loop, collision pairs, response, and events.
-- **[PrismDraft](https://github.com/onovich/PrismDraft)** — a C11 modeling and rendering prototype exploring low-poly hard-surface forms, shaders, editor behavior, and visual validation.
-- **[LitIO](https://github.com/onovich/LitIO) → [Rill](https://github.com/onovich/Rill)** — a small binary serialization library and a typed TCP client/server layer built on top of it.
-- **[EaseTween](https://github.com/onovich/EaseTween)** — a data-oriented Unity tween runner with measured GC-free steady-state updates after setup.
+- **[Rill](https://github.com/onovich/Rill)** — a lightweight C# TCP client/server layer with typed messages, background socket work, and main-thread dispatch through an explicit tick.
+- **[LitIO](https://github.com/onovich/LitIO)** — a compact C# binary serialization library for value types, arrays, and UTF-8 strings, using caller-owned buffers and offsets.
+- **[Swing](https://github.com/onovich/Swing)** — a Unity-friendly collection of easing, waveform, spline, and noise functions, with samples and tests.
 
 These repositories are at different stages. Their READMEs state what is implemented, what remains experimental, and what should not yet be treated as production-ready.
 
